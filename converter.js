@@ -40,4 +40,8 @@ var hslToRgb = function(hue, saturation, lightness){
     green = secondComponent;
   }
 
+  var lightnessAdjustment = lightness - (chroma / 2);
+
+  return [red + lightnessAdjustment, green + lightnessAdjustment, blue + lightnessAdjustment];
+
 };
