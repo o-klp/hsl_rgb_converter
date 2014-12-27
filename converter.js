@@ -30,16 +30,16 @@ var hslToRgb = function(hue, saturation, lightness){
     blue = secondComponent;
   }else if( huePrime === 3 ){
     red = 0;
-    blue = secondComponent;
-    green = chroma;
+    green = secondComponent;
+    blue = chroma;
   }else if( huePrime === 4 ){
     red = secondComponent;
-    blue = 0;
-    green = chroma;    
+    green = 0;
+    blue = chroma;
   }else if( huePrime === 5 ){
     red = chroma;
-    blue = 0;
-    green = secondComponent;
+    green = 0;
+    blue = secondComponent;
   }
 
   var lightnessAdjustment = lightness - (chroma / 2);
