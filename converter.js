@@ -7,9 +7,11 @@ var hslToRgb = function(hue, saturation, lightness){
     return [0, 0, 0];
   }
 
-  var chroma = (1 - Math.abs(2 * lightness - 1)) * saturation;
-  var huePrime = Math.floor(hue / 60);
+  var chroma = (1 - Math.abs((2 * lightness) - 1)) * saturation;
+  var huePrime = hue / 60;
   var secondComponent = chroma * (1 - Math.abs((huePrime % 2) - 1));
+
+  huePrime = Math.floor(huePrime);
   var red;
   var green;
   var blue;
@@ -41,7 +43,10 @@ var hslToRgb = function(hue, saturation, lightness){
   }
 
   var lightnessAdjustment = lightness - (chroma / 2);
+  red += lightnessAdjustment;
+  green += lightnessAdjustment;
+  blue += lightnessAdjustment;
 
-  return [red + lightnessAdjustment, green + lightnessAdjustment, blue + lightnessAdjustment];
+  return [Math.round(red * 255), Math.round(green * 255), Math.round(blue * 255)];
 
 };
