@@ -7,12 +7,12 @@ Lightness: [0, 1]
 
 Getting started:
 ```
-npm install HSLtoRGB
+npm install hsl-to-rgb
 ```
 
 Use:
 ```
-var converter = require('HSLtoRGB');
+var converter = require('hsl-to-rgb');
 
 var slateBlue = converter(223, 0.44, 0.56);
 

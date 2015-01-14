@@ -1,5 +1,5 @@
 {
-  "name": "HSLtoRGB",
+  "name": "hsl-to-rgb",
   "version": "1.0.0",
   "description": "simple HSL to RGB converter",
   "main": "converter.js",
